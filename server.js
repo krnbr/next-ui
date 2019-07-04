@@ -5,6 +5,8 @@ const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
+new OAuth2Strategy()
+
 app
     .prepare()
     .then(() => {
@@ -12,7 +14,7 @@ app
 
         server.get('/p/:id', (req, res) => {
             const actualPage = '/post';
-            const queryParams = { title: req.params.id };
+            const queryParams = { id: req.params.id };
             app.render(req, res, actualPage, queryParams);
         });
 
