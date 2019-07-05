@@ -72,7 +72,7 @@ app
 
         server.get('/home', (req, res) => {
             const actualPage = '/home';
-            app.render(req, res, actualPage, queryParams);
+            app.render(req, res, actualPage);
         });
 
         server.get('/p/:id', (req, res) => {

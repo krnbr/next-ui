@@ -9,6 +9,8 @@ const layoutStyle = {
 const Layout = props => (
     <div style={layoutStyle}>
         <Header />
+        {console.log("opened")}
+        {console.log("opened ->")}
         {props.content}
     </div>
 );
